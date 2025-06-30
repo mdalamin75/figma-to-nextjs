@@ -1,47 +1,66 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Header, Footer } from '../components';
-import { Smartphone, Globe, Video, Zap, Settings, Star, CheckCircle } from 'lucide-react';
+import { Smartphone, Globe, Video, Zap, Settings, Star, CheckCircle, Bot, Eye, Clock4, CircleCheckBig, ArrowRight, PanelTop } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   {
-    icon: <Zap className="w-7 h-7 text-blue-500" />, title: 'Lansează rapid', desc: 'Proiecte livrate în timp record',
+    icon: <Zap className="w-7 h-7 text-blue-500" />, title: 'Lansează rapid', desc: 'Website-uri și aplicații dezvoltate în timp record',
   },
   {
-    icon: <Settings className="w-7 h-7 text-blue-500" />, title: 'Automatizăm procesele tale', desc: 'AI și automatizări pentru eficiență',
+    icon: <Bot className="w-7 h-7 text-blue-500" />, title: 'Automatizăm procesele tale', desc: 'De la conținut la funcționalitate – AI-ul lucrează pentru tine',
   },
   {
-    icon: <Globe className="w-7 h-7 text-blue-500" />, title: 'Conținut video care atrage', desc: 'Clipuri promo moderne pentru brandul tău',
+    icon: <Eye className="w-7 h-7 text-purple-500" />, title: 'Conținut video care atrage', desc: 'Clipuri promo moderne, create special pentru brandul tău',
   },
   {
-    icon: <Video className="w-7 h-7 text-blue-500" />, title: 'Mai puțină muncă repetitivă', desc: 'Automatizăm taskurile ca tu să te focusezi pe business',
+    icon: <Clock4 className="w-7 h-7 text-pink-500" />, title: 'Mai puțină muncă repetitivă', desc: 'Automatizăm taskurile ca tu să te focusezi pe business',
   },
 ];
 
 const services = [
   {
-    icon: <Smartphone className="w-8 h-8 text-blue-500" />, title: 'Aplicații Mobile Personalizate',
-    desc: 'Aplicații iOS, Android, cross-platform. Design modern, funcționalități avansate.',
-    image: '/img/restaurentApp.png',
+    icon: <Smartphone className="w-8 h-8 text-blue-500" />,
+    title: 'Aplicații Mobile Personalizate',
+    desc: 'Aplicații mobile. Precise. Eficiente.',
+    icon2: <CircleCheckBig className="w-4 h-4 text-blue-500" />,
+    text: "Personalizat pentru afacerea ta",
+    text2: "Publicare garantată în:",
+    text3: "Proces optimizat, cap-coadă",
+    image: '/img/apps.png',
     href: '/mobile-apps',
     tags: ['iOS', 'Android', 'Cross-platform'],
-    cta: 'Solicită o ofertă',
+    icon3: <ArrowRight className="w-4 h-4 text-blue-500" />,
+    cta: 'Solicită o aplicație',
   },
   {
-    icon: <Globe className="w-8 h-8 text-blue-500" />, title: 'Construim website-ul tău',
-    desc: 'Site-uri de prezentare, magazine online, platforme custom. Responsive, SEO, performanță.',
-    image: '/img/website.png',
+    icon: <PanelTop className="w-8 h-8 text-sky-400" />,
+    title: 'Construim website-ul tău',
+    desc: 'Site-ul tău, optimizat pentru succes.',
+    icon2: <CircleCheckBig className="w-4 h-4 text-sky-400" />,
+    text: "Design modern și responsive",
+    text2: "Performanță optimizată",
+    text3: "Administrare ușoară",
+    image: '/img/websites.png',
     href: '/websites',
     tags: ['Prezentare', 'E-commerce', 'Custom'],
-    cta: 'Solicită un site',
+    icon3: <ArrowRight className="w-4 h-4 text-sky-400" />,
+    cta: 'Solicită un website',
   },
   {
-    icon: <Video className="w-8 h-8 text-blue-500" />, title: 'Video promo de impact',
-    desc: 'Clipuri promo, animații, conținut social media. Producție video profesională.',
-    image: '/img/clinickApp.png',
+    icon: <Video className="w-8 h-8 text-purple-500" />,
+    title: 'Video promo de impact',
+    desc: 'Captează atenția. Rămâi memorabil.',
+    icon2: <CircleCheckBig className="w-4 h-4 text-purple-500" />,
+    text: "Captivant de la primele secunde",
+    text2: "Perfect pentru social media",
+    text3: "Script, voice-over, editare",
+    image: '/img/video.png',
     href: '/video',
     tags: ['Promo', 'Animații', 'Social'],
+    icon3: <ArrowRight className="w-4 h-4 text-purple-500" />,
     cta: 'Solicită video',
   },
 ];
@@ -94,6 +113,12 @@ const faq = [
 ];
 
 export default function HomePage() {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
@@ -101,45 +126,45 @@ export default function HomePage() {
       <section className="pt-16 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-center">
           <div className="flex flex-col items-start">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl  font-extrabold text-gray-900 leading-none mb-4">
               Transformăm<br />idei în conținut<br />care <span className="text-blue-600">captivează</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-7 max-w-xl">
+            <p className="text-lg text-gray-600 mb-7 max-w-lg">
               Site-uri, aplicații, branding, automatizări și conținut creativ – toate într-un <span className="text-blue-600 font-semibold">singur loc</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-7">
-              <a href="#" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2">
+              <a href="#" className="inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2">
                 Contactează-ne
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                <Image src="/img/boostIcon.png" alt="boostIcon" width={20} height={10} />
               </a>
-              <a href="#" className="inline-flex items-center border border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-base gap-2">
+              <a href="#" className="inline-flex items-center border bg-blue-400/10 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-base gap-2">
                 Contează pe experiența noastră!
               </a>
             </div>
             <div className="flex items-center gap-4 mb-2">
-              <span className="text-gray-800 font-semibold text-base">100+ afaceri</span>
+              <Image src="/img/people.png" alt="people" width={15} height={10} />
+              <span className="text-gray-400 font-normal text-base">100+ afaceri</span>
               <div className="flex text-yellow-400">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-current" />
+                  <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <span className="text-gray-500 text-sm">Perfect pentru</span>
-              <div className="flex items-center gap-1">
-                <svg className="w-6 h-6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#4285F4" /></svg>
-                <svg className="w-6 h-6" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="#3b5998" /></svg>
-                <svg className="w-6 h-6" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="#000" /></svg>
+              <div className="d-flex">
+                <span className="text-gray-400 text-sm">Perfect pentru</span>
+                <div className="flex items-center gap-1">
+                  <Image src="/img/google.png" alt="google" width={23} height={23} />
+                  <Image src="/img/facebook.png" alt="facebook" width={23} height={23} />
+                  <Image src="/img/tiktok.png" alt="tiktok" width={23} height={23} />
+                  <Image src="/img/instagram.png" alt="instagram" width={23} height={23} />
+                  <Image src="/img/x.png" alt="x" width={23} height={23} />
+                </div>
               </div>
-            </div>
-            <div className="flex items-center gap-2 mt-2">
-              <img src="/img/logo.png" alt="Logo" className="w-8 h-8 rounded-full" />
-              <span className="text-xs text-gray-500">5.0 - 150+ review-uri</span>
-              <img src="/vercel.svg" alt="Vercel" className="w-12 h-6" />
-              <img src="/next.svg" alt="Next.js" className="w-12 h-6" />
             </div>
           </div>
           <div className="relative flex justify-center items-center min-h-[340px]">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-100/60 to-blue-300/20 blur-2xl" />
-            <div className="relative grid grid-cols-2 gap-4 z-10">
+            <Image src="/img/hero.png" alt="hero" width={400} height={100} />
+            {/* <div className="relative grid grid-cols-2 gap-4 z-10">
               <div className="w-32 h-24 bg-white rounded-xl shadow flex items-center justify-center">
                 <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" /></svg>
               </div>
@@ -152,7 +177,7 @@ export default function HomePage() {
               <div className="w-32 h-24 bg-white rounded-xl shadow flex items-center justify-center mt-8">
                 <svg className="w-8 h-8 text-blue-100" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" /></svg>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -171,6 +196,10 @@ export default function HomePage() {
       {/* Services */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold">Soluția ta completă pentru conținut digital</h2>
+            <p className="text-base text-gray-500 mt-3">Creează conținut <span className="text-blue-600">captivant</span> și <span className="text-blue-600">profesional</span> în mai multe formate cu ajutorul uneltelor noastre <span className="text-blue-600">AI</span>.</p>
+          </div>
           {services.map((s, i) => (
             <div key={i} className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
@@ -178,16 +207,28 @@ export default function HomePage() {
                   {s.icon}
                   <h3 className="text-2xl font-bold text-gray-900">{s.title}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{s.desc}</p>
-                <div className="flex gap-2 mb-4">
+                <p className="text-gray-500 text-base mb-4">{s.desc}</p>
+                <div className="flex items-center gap-2 mb-3">
+                  {s.icon2}
+                  <p className="text-gray-500 text-base">{s.text}</p>
+                </div>
+                <div className="flex items-center gap-2 mb-3">
+                  {s.icon2}
+                  <p className="text-gray-500 text-base">{s.text2}</p>
+                </div>
+                <div className="flex items-center gap-2 mb-3">
+                  {s.icon2}
+                  <p className="text-gray-500 text-base">{s.text3}</p>
+                </div>
+                {/* <div className="flex gap-2 mb-4">
                   {s.tags.map((tag) => (
                     <span key={tag} className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold">{tag}</span>
                   ))}
-                </div>
-                <Link href={s.href} className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition-colors">{s.cta}</Link>
+                </div> */}
+                <Link href={s.href} className="flex items-center gap-2 max-w-56 px-6 py-2 text-center mt-10 bg-blue-600/10 text-blue-700 rounded-full font-semibold shadow hover:bg-blue-700 hover:text-white transition-colors">{s.cta} {s.icon3}</Link>
               </div>
               <div className="order-1 md:order-2 flex justify-center">
-                <img src={s.image} alt={s.title} className="w-80 h-56 object-contain rounded-2xl shadow-lg" />
+                <img src={s.image} alt={s.title} className="w-100 h-80 object-contain rounded-2xl" />
               </div>
             </div>
           ))}
@@ -198,16 +239,24 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">Întrebări frecvente</h2>
-            <p className="mt-4 text-xl text-gray-600">Tot ce trebuie să știi despre platforma noastră de creare conținut AI</p>
+            <p className="mt-4 text-lg text-gray-400">Tot ce trebuie să știi despre platforma noastră de creare conținut AI</p>
           </div>
           <div className="space-y-4">
             {faq.map((item, i) => (
               <div key={i} className="bg-gray-50 rounded-xl transition-all duration-300">
-                <button className="w-full flex justify-between items-center text-left p-6 cursor-pointer group" type="button">
+                <button
+                  className="w-full flex justify-between items-center text-left p-6 cursor-pointer group"
+                  type="button"
+                  onClick={() => toggleFaq(i)}
+                >
                   <span className="text-lg font-semibold text-gray-800">{item.q}</span>
-                  <span className="ml-4 text-blue-500 group-hover:text-blue-700"><svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg></span>
+                  <span className={`ml-4 text-blue-500 group-hover:text-blue-700 transition-transform duration-300 ${openFaq === i ? 'rotate-180' : ''}`}>
+                    <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
                 </button>
-                <div className="px-6 pb-6">
+                <div className={`transition-all duration-300 overflow-hidden ${openFaq === i ? 'px-6 pb-6 max-h-96 opacity-100' : 'p-0 max-h-0 opacity-0'}`}>
                   <p className="text-gray-600">{item.a}</p>
                 </div>
               </div>

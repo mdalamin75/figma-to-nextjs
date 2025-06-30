@@ -8,11 +8,11 @@ export default function Header() {
 
     const navLinks = [
         { href: '/', label: 'Home' },
-        { href: '/websites', label: 'Website-uri' },
+        { href: '/websites', label: 'Website' },
         { href: '/mobile-apps', label: 'Aplicații Mobile' },
-        { href: '/video', label: 'Conținut video' },
-        { href: '/maintenance', label: 'Mentenanță' },
+        { href: '/video', label: 'Promo Video' },
         { href: '/ai', label: 'Soluții AI' },
+        { href: '/maintenance', label: 'Mentenanță' },
     ];
 
     return (
@@ -22,7 +22,7 @@ export default function Header() {
                     {/* Logo and tagline */}
                     <div className="flex items-center space-x-3">
                         <Link href="/">
-                            <Image src="/img/logo.png" alt="Logo" width={80} height={40} />
+                            <Image src="/img/logo.png" alt="Logo" width={200} height={100} />
                         </Link>
                     </div>
 
@@ -37,9 +37,9 @@ export default function Header() {
 
                     {/* Right side: CTA */}
                     <div className="flex items-center space-x-3">
-                        <a href="#" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
+                        <a href="#" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                             Contactează-ne
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                            <Image src="/img/boostIcon.png" alt="boostIcon" width={20} height={10} />
                         </a>
                     </div>
 
