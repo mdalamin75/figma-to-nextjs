@@ -2,47 +2,65 @@
 import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
-import { ShoppingCart, Paintbrush, Bot } from 'lucide-react';
+import { ShoppingCart, Paintbrush, Bot, Check } from 'lucide-react';
 
 export default function LandingPage() {
   const heroData = {
     title: (
       <>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Website-uri care</span><br />
-        impresionează și<br />
-        performează
+        Website-uri care<br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          impresionează
+        </span>{" "}
+        și<br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+          performează
+        </span>
       </>
     ),
-    subtitle: "De la site-uri de prezentare la magazine online complexe, creăm experiențe digitale care nu doar arată bine, ci și convertesc vizitatorii în clienți fideli.",
-    cta: { text: "Vreau o ofertă de preț", href: "#" },
-    rating: "Peste 100 de afaceri mulțumite",
-    image: { src: "/img/website.png", alt: "Website preview" }
+    subtitle: (
+      <>
+        Design modern, funcționalitate inteligentă și integrare completă – <span className="text-blue-500 font-semibold">site-ul</span> tău devine un instrument de
+        <span className="text-blue-500 font-semibold">creștere reală.</span>
+      </>
+    ),
+    cta: { text: "Contactează-ne", href: "#" },
+    cta_2: { text: "Contează pe experiența noastră!", href: "#" },
+    rating: "100+ website-uri",
+    image: { src: "/img/webHero.png", alt: "Website preview" },
+    image_bottom_text: 'Călătorește cu viteza și confortul pe care le meriți. Fără escale, fără așteptări, doar libertate și eficiență la fiecare zbor.',
   };
 
   const featuresData = {
     title: (
       <>
-        Website-uri Strategice care <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Vând</span>
+        Website-uri Strategice care <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">Vând</span>
       </>
     ),
-    subtitle: "Soluțiile noastre web sunt gândite pentru a genera rezultate concrete, transformând vizitatorii în clienți.",
+    // subtitle: "Soluțiile noastre web sunt gândite pentru a genera rezultate concrete, transformând vizitatorii în clienți.",
     features: [
       {
-        icon: <ShoppingCart className="w-8 h-8 text-blue-500" />,
-        title: 'Platforme E-commerce',
-        description: 'Magazine online performante, optimizate pentru conversii, care oferă o experiență de cumpărături excepțională.',
+        icon: <Check  className="w-8 h-8 text-purple-500" />,
+        title: 'Performanță de Top',
+        description: 'Optimizare SEO, viteză și UX gândit pentru conversie.',
       },
       {
-        icon: <Paintbrush className="w-8 h-8 text-green-500" />,
-        title: 'Branding și identitate vizuală',
-        description: 'Creăm o imagine de brand memorabilă, de la logo și paletă de culori, la manual de brand complet.',
+        icon: <Check className="w-8 h-8 text-purple-500" />,
+        title: 'Branding Care Se Simte',
+        description: 'Design coerent, memorabil, adaptat publicului tău.',
       },
       {
-        icon: <Bot className="w-8 h-8 text-purple-500" />,
-        title: 'Strategie de Automatizări',
-        description: 'Implementăm soluții de automatizare personalizate pentru a eficientiza procesele și a reduce costurile operaționale.',
+        icon: <Check className="w-8 h-8 text-purple-500" />,
+        title: 'Scalabil și Automatizat',
+        description: 'Gata pentru integrare cu AI, CRM-uri sau campanii de ads.',
       },
-    ]
+    ],
+    bottom_text: (
+      <>
+        Creăm platforme digitale axate pe <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">conversie, viteză</span> și <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">impact vizual.</span> Gândește-ți site-ul ca un <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">activ de marketing,</span>  nu doar o vitrină. 
+      </>
+    ),
+    cta: { text: "Contactează-ne", href: "#" },
   };
 
   const solutionsData = {
@@ -50,52 +68,68 @@ export default function LandingPage() {
       {
         name: 'Start',
         price: '1.000€',
-        description: 'Ideal pentru startup-uri și proiecte mici.',
+        description: 'Dezvoltat 100% pe nevoile tale reale',
+        cta: 'Lansare rapidă',
         features: [
-          'Website de prezentare (până la 5 pagini)',
-          'Design personalizat',
-          'Formular de contact',
-          'Optimizare SEO de bază',
-          'Suport tehnic 1 lună',
+          'Design modern și adaptabil',
+          'Structură clară, axată pe esențial',
+          'Conținut vizual și textual de impact',
+          'Navigare intuitivă și accesibilă',
+          'Formular de contact și integrare socială',
+          'Optimizare pentru mobil și desktop',
+          'Fundamente SEO incluse',
+          'Lansare rapidă, fără bătăi de cap'
         ],
         recommended: false,
       },
       {
         name: 'Business',
         price: '3.000€',
-        description: 'Pentru afaceri în creștere care vor mai mult.',
+        description: 'Dezvoltat 100% pe nevoile tale reale',
+        cta: 'Creștere stabilă',
         features: [
-          'Website complex (până la 10 pagini)',
-          'Sistem de administrare conținut (CMS)',
-          'Integrare blog',
-          'Optimizare SEO avansată',
-          'Suport tehnic 3 luni',
-        ],
-        recommended: true,
-      },
-      {
-        name: 'Custom',
-        price: '5.000€+',
-        description: 'Soluții personalizate pentru nevoi complexe.',
-        features: [
-          'Platformă web custom',
-          'Integrări API externe',
-          'Funcționalități avansate',
-          'Consultanță strategică',
-          'Suport tehnic dedicat',
+          'Design personalizat pentru brandul tău',
+          'Conținut orientat spre atragerea clienților',
+          'Elemente dinamice & interactive',
+          'Structură scalabilă pentru creștere',
+          'Integrare formulare, testimoniale, blog',
+          'Optimizare SEO extinsă',
+          'Experiență fluidă pentru utilizatori',
+          'Adaptat obiectivelor de business'
         ],
         recommended: false,
       },
       {
         name: 'E-commerce',
-        price: '10.000€+',
-        description: 'Soluții personalizate pentru nevoi complexe.',
+        price: '5.000€+',
+        description: 'Dezvoltat 100% pe nevoile tale reale',
+        cta: 'Vânzări eficiente',
         features: [
-          'Platformă web custom',
-          'Integrări API externe',
-          'Funcționalități avansate',
-          'Consultanță strategică',
-          'Suport tehnic dedicat',
+          'Design optimizat pentru vânzări online',
+          'Structură gândită pentru conversie',
+          'Funcționalități avansate de magazin',
+          'Proces de comandă intuitiv și eficient',
+          'Integrări de plăți și livrare',
+          'Automatizări pentru campanii și reduceri',
+          'Management ușor al conținutului',
+          'Pregătit pentru scalare și promovare',
+        ],
+        recommended: false,
+      },
+      {
+        name: 'Custom',
+        price: '10.000€+',
+        description: 'Dezvoltat 100% pe nevoile tale reale',
+        cta: 'Fără limite',
+        features: [
+          'Arhitectură unică, creată de la zero',
+          'Soluții digitale personalizate complet',
+          'Funcționalități complexe adaptate nevoilor',
+          'Integrare cu sisteme externe/API-uri',
+          'Experiență interactivă și scalabilă',
+          'Automatizări, dashboard-uri, AI dacă e cazul',
+          'Suport strategic și consultanță tehnică',
+          'Creat pentru performanță',
         ],
         recommended: false,
       },
@@ -110,29 +144,35 @@ export default function LandingPage() {
     subtitle: "Răspunsuri la cele mai comune întrebări despre serviciile noastre web.",
     faqs: [
       {
-        question: "Cum funcționează procesul de design?",
-        answer: "Procesul nostru de design începe cu o sesiune de discovery pentru a înțelege viziunea și obiectivele tale. Continuăm cu wireframes, mockups și prototipuri interactive, asigurându-ne că designul final este atât estetic, cât și funcțional."
-      },
-      {
-        question: "Cât timp durează crearea unui website?",
-        answer: "Timpul de dezvoltare variază în funcție de complexitatea proiectului. Un website de prezentare poate dura 2-4 săptămâni, în timp ce o platformă e-commerce sau o aplicație custom poate dura câteva luni. Vom stabili un calendar clar de la început."
-      },
-      {
-        question: "Oferiți servicii de mentenanță?",
-        answer: "Da, oferim pachete de mentenanță flexibile pentru a ne asigura că website-ul tău rămâne securizat, actualizat și performant pe termen lung. Acestea includ update-uri, backup-uri și suport tehnic."
+        question: "Cât durează realizarea unui website?",
+        answer:
+          "Timpul de livrare variază în funcție de cerințe și complexitate, dar ne asigurăm că totul este gata într-un interval rezonabil.",
       },
       {
         question: "Website-ul va fi optimizat pentru mobil?",
-        answer: "Absolut. Toate website-urile pe care le creăm sunt complet responsive, ceea ce înseamnă că se vor afișa și vor funcționa perfect pe orice dispozitiv, de la desktop-uri la telefoane mobile."
+        answer:
+          "Da. Toate website-urile dezvoltate sunt responsive și arată impecabil pe orice dispozitiv – telefon, tabletă sau desktop.",
       },
       {
-        question: "Voi putea actualiza conținutul website-ului?",
-        answer: "Da. Majoritatea website-urilor pe care le dezvoltăm includ un sistem de management al conținutului (CMS) precum WordPress sau o soluție custom, care îți va permite să actualizezi textele, imaginile și alte elemente cu ușurință."
+        question: "Pot cere modificări după livrare?",
+        answer:
+          "Desigur. Oferim o perioadă de revizii incluse pentru a ne asigura că rezultatul final reflectă exact ceea ce ai nevoie.",
       },
       {
-        question: "Ce fel de suport tehnic oferiți?",
-        answer: "Oferim suport tehnic continuu prin pachetele noastre de mentenanță. Pentru orice problemă sau întrebare, echipa noastră este disponibilă să te ajute rapid și eficient."
-      }
+        question: "Pot integra un blog, formular de contact sau sistem de rezervări?",
+        answer:
+          "Da, includem funcționalități personalizate în funcție de obiectivele site-ului și specificul afacerii tale.",
+      },
+      {
+        question: "Site-ul va fi optimizat SEO?",
+        answer:
+          "Da. Structura este construită corect din punct de vedere SEO, cu atenție la viteză, titluri, descrieri și accesibilitate.",
+      },
+      {
+        question: "Primesc acces pentru a gestiona conținutul?",
+        answer:
+          "Absolut. Vei avea panou de administrare ușor de folosit pentru a actualiza texte, imagini și secțiuni oricând dorești.",
+      },
     ]
   };
 
@@ -145,11 +185,14 @@ export default function LandingPage() {
         cta={heroData.cta}
         rating={heroData.rating}
         image={heroData.image}
+        image_bottom_text={heroData.image_bottom_text }
       />
       <FeaturesSection
         title={featuresData.title}
         subtitle={featuresData.subtitle}
         features={featuresData.features}
+        bottom_text={featuresData.bottom_text}
+        cta={featuresData.cta}
       />
       <SolutionsSection plans={solutionsData} />
       <FaqSection

@@ -37,13 +37,13 @@ export default function FaqSection({ title, subtitle, faqs }) {
     return (
         <section className="bg-white py-20">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
+                <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900">
                         {title}
                     </h2>
-                    <p className="mt-4 text-xl text-gray-600">
+                    {/* <p className="mt-4 text-xl text-gray-600">
                         {subtitle}
-                    </p>
+                    </p> */}
                 </div>
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (

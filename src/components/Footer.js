@@ -20,7 +20,7 @@ export default function Footer() {
                     <div className="md:col-span-4">
                         <h4 className="font-semibold text-gray-800 mb-2">Legal</h4>
                         <ul className="space-y-1 text-sm text-gray-600">
-                            <li><a href="#" className="hover:text-blue-600 transition-colors">Termeni și Condiții</a></li>
+                            <li><a href="/terms-and-conditions" className="hover:text-blue-600 transition-colors">Termeni și Condiții</a></li>
                             <li><a href="#" className="hover:text-blue-600 transition-colors">Politica de Confidențialitate</a></li>
                             <li><a href="#" className="hover:text-blue-600 transition-colors">Politica de Cookie-uri</a></li>
                         </ul>

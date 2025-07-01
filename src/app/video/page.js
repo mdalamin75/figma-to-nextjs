@@ -2,7 +2,7 @@
 import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
-import { Video, Film, Share2 } from 'lucide-react';
+import { Video, Film, Share2, Check } from 'lucide-react';
 
 export default function VideoPage() {
     const heroData = {
@@ -13,9 +13,10 @@ export default function VideoPage() {
             </>
         ),
         subtitle: "De la clipuri de prezentare la animații complexe, producem conținut video care captivează audiența și transmite mesajul brandului tău cu impact.",
-        cta: { text: "Vreau un video de prezentare", href: "#" },
-        rating: "Peste 200 de clipuri video produse",
-        image: { src: "/img/clinickApp.png", alt: "Video Production" }
+        cta: { text: "Contactează-ne", href: "#" },
+        cta_2: { text: "Contează pe experiența noastră!", href: "#" },
+        rating: "100+ afaceri",
+        image: { src: "/img/video.png", alt: "Video Production" }
     };
 
     const featuresData = {
@@ -27,21 +28,27 @@ export default function VideoPage() {
         subtitle: "Producem conținut video de înaltă calitate, optimizat pentru a genera rezultate pe platformele relevante pentru tine.",
         features: [
             {
-                icon: <Video className="w-8 h-8 text-red-500" />,
+                icon: <Check className="w-8 h-8 text-red-500" />,
                 title: 'Video-uri de Prezentare',
                 description: 'Creăm clipuri de prezentare pentru produse, servicii sau companii, care scot în evidență punctele forte.',
             },
             {
-                icon: <Film className="w-8 h-8 text-blue-500" />,
+                icon: <Check className="w-8 h-8 text-blue-500" />,
                 title: 'Animații și Motion Graphics',
                 description: 'Realizăm animații 2D și 3D, explainer videos și elemente de motion graphics pentru un plus de dinamism.',
             },
             {
-                icon: <Share2 className="w-8 h-8 text-green-500" />,
+                icon: <Check className="w-8 h-8 text-green-500" />,
                 title: 'Conținut pentru Social Media',
                 description: 'Producem conținut video optimizat pentru platforme precum Instagram, TikTok, Facebook și YouTube.',
             },
-        ]
+        ],
+        bottom_text: (
+            <>
+              Creăm platforme digitale axate pe <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">conversie, viteză</span> și <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">impact vizual.</span> Gândește-ți site-ul ca un <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">activ de marketing,</span>  nu doar o vitrină. 
+            </>
+          ),
+          cta: { text: "Contactează-ne", href: "#" },
     };
 
     const solutionsData = {
