@@ -20,7 +20,7 @@ export default function TermsAndConditions() {
                     <p className="text-sm text-gray-500 text-center mb-8">Effective Date: December 15, 2024</p>
                     <div className="prose prose-sm sm:prose-base max-w-none text-gray-800">
                         <h3 className="font-bold mb-4 mt-3">1. Introduction</h3>
-                        <p>Welcome to storygen.co. These Terms of Service ("Terms") govern your access to and use of our website located at https://storygen.co ("Site") and the services we offer. By accessing or using our services, you agree to comply with these Terms. If you do not agree to any part of these Terms, you must not use our services.</p>
+                        <p>Welcome to storygen.co. These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website located at https://storygen.co (&quot;Site&quot;) and the services we offer. By accessing or using our services, you agree to comply with these Terms. If you do not agree to any part of these Terms, you must not use our services.</p>
                         <h3 className="font-bold mb-2 mt-4">2. Definitions</h3>
                         <ul>
                             <li><b>User:</b> Any person accessing the Site and using the offered services.</li>
@@ -52,7 +52,7 @@ export default function TermsAndConditions() {
                         </ul>
                         <h4>5.3 Security and Integrity of Services</h4>
                         <ul>
-                            <li>Not attempt to gain unauthorized access to storygen.co';s systems, databases, or services.</li>
+                            <li>Not attempt to gain unauthorized access to storygen.co&apos;s systems, databases, or services.</li>
                             <li>Not introduce malware (viruses, Trojan horses, etc.) or engage in any actions that could compromise the security, availability, or integrity of the services and other users.</li>
                         </ul>
                         <h4>5.4 Authenticity of Information</h4>
@@ -86,7 +86,7 @@ export default function TermsAndConditions() {
                         <h4>13.3 Payment Terms</h4>
                         <p>Payments are made exclusively through our secure payment service provider, Stripe. Subscriptions are offered in various plans, priced in US dollars (USD) on our site, and all payments are made monthly in this currency. Upon subscribing to a plan, it is automatically renewed each month on the anniversary date of the subscription. This information is clearly stated on the Stripe payment page. Users are responsible for managing their subscriptions, including tracking and cancellation if necessary. Some reminders may not be sent to notify users of an active subscription. No refunds will be issued in case of user oversight or failure to cancel.</p>
                         <p>Subscriptions are non-binding and can be canceled at any time directly from the platform; cancellation is immediate, and no billing will occur for the following cycle. Please retain the benefits of their subscription until the end of the current period.</p>
-                        <p>Payments are securely processed via SSL protocol and Stripe's payment token management system, compliant with PCI-DSS standards. No banking data is stored on our servers. In the event of delayed or failed payment, storygen.co reserves the right to suspend or terminate your access to the services immediately, in accordance with the provisions outlined in our General Terms of Sale.</p>
+                        <p>Payments are securely processed via SSL protocol and Stripe&apos;s payment token management system, compliant with PCI-DSS standards. No banking data is stored on our servers. In the event of delayed or failed payment, storygen.co reserves the right to suspend or terminate your access to the services immediately, in accordance with the provisions outlined in our General Terms of Sale.</p>
                         <h4>13.4 Delivery of Execution Terms</h4>
                         <p>After purchasing a subscription, you will have immediate access to our services. Updates and improvements to the services are deployed regularly at no additional cost.</p>
                         <h4>13.5 Legal Warranties</h4>
