@@ -41,7 +41,13 @@ export default function MaintenancePage() {
                 title: 'Backup și Restaurare',
                 description: 'Realizăm backup-uri regulate ale datelor și fișierelor pentru a putea restaura rapid serviciul în caz de nevoie.',
             },
-        ]
+        ],
+        bottom_text: (
+            <>
+                Creăm aplicații mobile <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">optimizate</span>  pentru <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">viteză, UX și rezultate concrete.</span> Aplicația ta devine un instrument puternic de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">marketing și fidelizare.</span>
+            </>
+        ),
+        cta: { text: "Contactează-ne", href: "#" },
     };
 
     const solutionsData = {
