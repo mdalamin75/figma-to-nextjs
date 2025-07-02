@@ -8,7 +8,8 @@ export default function VideoPage() {
     const heroData = {
         title: (
             <>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400">Conținut video</span><br />
+                Conținut video
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400"></span><br />
                 care vinde și convinge
             </>
         ),

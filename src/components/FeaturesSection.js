@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function FeaturesSection({ title, subtitle, features, bottom_text, cta }) {
@@ -31,8 +32,15 @@ export default function FeaturesSection({ title, subtitle, features, bottom_text
                         {cta && (
                             <a
                                 href={cta.href}
-                                className="inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-600 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-lg gap-3 max-w-52">
+                                target="_blank"
+                                className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-lg gap-3 max-w-52">
                                 {cta.text}
+                                <Image
+                                    src="/img/whatsapp.png"
+                                    alt="whatsapp"
+                                    width={20}
+                                    height={10}
+                                />
                             </a>
                         )}
                     </div>
