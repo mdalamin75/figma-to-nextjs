@@ -13,7 +13,8 @@ export default function MaintenancePage() {
             </>
         ),
         subtitle: "Asigurăm funcționarea optimă a proiectului tău digital prin servicii de mentenanță proactivă, suport tehnic rapid și actualizări de securitate.",
-        cta: { text: "Alege un pachet de mentenanță", href: "#" },
+        cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
+        cta_2: { text: "Contează pe experiența noastră!", href: "#" },
         rating: "Peste 99.9% uptime pentru clienții noștri",
         image: { src: "/img/website.png", alt: "Website Maintenance" }
     };

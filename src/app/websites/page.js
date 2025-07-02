@@ -3,6 +3,7 @@ import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
 import { ShoppingCart, Paintbrush, Bot, Check } from 'lucide-react';
+import WebMockupSlider from '../../components/WebMockupSlider';
 
 export default function LandingPage() {
   const heroData = {
@@ -21,7 +22,7 @@ export default function LandingPage() {
     subtitle: (
       <>
         Design modern, funcționalitate inteligentă și integrare completă – <span className="text-blue-500 font-semibold">site-ul</span> tău devine un instrument de
-        <span className="text-blue-500 font-semibold">creștere reală.</span>
+        <span className="text-blue-500 font-semibold"> creștere reală.</span>
       </>
     ),
     cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
@@ -40,24 +41,24 @@ export default function LandingPage() {
     // subtitle: "Soluțiile noastre web sunt gândite pentru a genera rezultate concrete, transformând vizitatorii în clienți.",
     features: [
       {
-        icon: <Check  className="w-8 h-8 text-purple-500" />,
+        icon: <Check className="w-8 h-8 text-blue-700" />,
         title: 'Performanță de Top',
         description: 'Optimizare SEO, viteză și UX gândit pentru conversie.',
       },
       {
-        icon: <Check className="w-8 h-8 text-purple-500" />,
+        icon: <Check className="w-8 h-8 text-blue-700" />,
         title: 'Branding Care Se Simte',
         description: 'Design coerent, memorabil, adaptat publicului tău.',
       },
       {
-        icon: <Check className="w-8 h-8 text-purple-500" />,
+        icon: <Check className="w-8 h-8 text-blue-700" />,
         title: 'Scalabil și Automatizat',
         description: 'Gata pentru integrare cu AI, CRM-uri sau campanii de ads.',
       },
     ],
     bottom_text: (
       <>
-        Creăm platforme digitale axate pe <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">conversie, viteză</span> și <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">impact vizual.</span> Gândește-ți site-ul ca un <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">activ de marketing,</span>  nu doar o vitrină. 
+        Creăm platforme digitale axate pe <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">conversie, viteză</span> și <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">impact vizual.</span> Gândește-ți site-ul ca un <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">activ de marketing,</span>  nu doar o vitrină.
       </>
     ),
     cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
@@ -183,9 +184,10 @@ export default function LandingPage() {
         title={heroData.title}
         subtitle={heroData.subtitle}
         cta={heroData.cta}
+        cta_2={heroData.cta_2}
         rating={heroData.rating}
-        image={heroData.image}
-        image_bottom_text={heroData.image_bottom_text }
+        rightContent={<WebMockupSlider />}
+      // image_bottom_text={heroData.image_bottom_text} // Optionally remove or keep
       />
       <FeaturesSection
         title={featuresData.title}

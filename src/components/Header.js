@@ -37,7 +37,7 @@ export default function Header() {
 
                     {/* Right side: CTA */}
                     <div className="flex items-center space-x-3">
-                        <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
+                        <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                             Contactează-ne
                             <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                         </a>
@@ -65,7 +65,7 @@ export default function Header() {
                                 {link.label}
                             </Link>
                         ))}
-                         <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
+                         <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                             Contactează-ne
                             <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                         </a>

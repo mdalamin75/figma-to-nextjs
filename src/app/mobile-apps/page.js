@@ -15,6 +15,7 @@ export default function MobileAppsPage() {
         ),
         subtitle: "Dezvoltăm aplicații mobile pentru iOS și Android care oferă experiențe memorabile și funcționalități de top, conectând brandul tău cu utilizatorii.",
         cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
+        cta_2: { text: "Contează pe experiența noastră!", href: "#" },
         rating: "100+ afaceri",
         image: { src: "/img/mobileHero.png", alt: "Mobile App preview" },
         image_bottom_text: 'Călătorește cu viteza și confortul pe care le meriți. Fără escale, fără așteptări, doar libertate și eficiență la fiecare zbor.',

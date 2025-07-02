@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
+import {PanelTop, Smartphone, Clapperboard, Lightbulb} from "lucide-react";
 
 export default function HomeHeroSection() {
     return (
@@ -22,7 +23,7 @@ export default function HomeHeroSection() {
                     <div className="flex flex-col gap-4 mb-7">
                         <a
                             href="https://api.whatsapp.com/send?phone=40743368360"
-                            className="inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-600 text-white px-4 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2 max-w-48">
+                            className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2 max-w-48">
                             Contactează-ne
                             <Image
                                 src="/img/whatsapp.png"
@@ -64,7 +65,35 @@ export default function HomeHeroSection() {
                         </div>
                     </div>
                 </div>
-                {/* ...right side visuals as in your home hero... */}
+                <div className="relative flex justify-center items-center min-h-[340px]">
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-100/60 to-blue-300/20 blur-2xl" />
+                    <div>
+                        <div className="bg-white/30 w-90 h-40 rounded-2xl shadow-lg pt-1 mb-7">
+                            <div className="mt-5 ml-3 bg-blue-100 w-10 h-10 flex justify-center items-center rounded-full ">
+                                <PanelTop className="text-blue-500" />
+                            </div>
+                        </div>
+                        <div className="flex">
+                            <div className="bg-white w-40 h-55 rounded-2xl shadow-lg pt-1 mr-7">
+                                <div className="mt-5 ml-3 bg-blue-100 w-10 h-10 flex justify-center items-center rounded-full shadow-2xl ">
+                                    <Smartphone className="text-blue-500" />
+                                </div>
+                            </div>
+                            <div className="flex flex-col">
+                                <div className="bg-white/30 w-40 h-25 rounded-2xl shadow-lg pt-1 mb-4">
+                                    <div className="mt-5 ml-3 bg-blue-100  w-10 h-10 flex justify-center items-center rounded-full ">
+                                        <Clapperboard className="text-blue-500" />
+                                    </div>
+                                </div>
+                                <div className="bg-white/30 w-40 h-25 rounded-2xl shadow-lg pt-1">
+                                    <div className="mt-5 ml-3 bg-blue-100  w-10 h-10 flex justify-center items-center rounded-full ">
+                                        <Lightbulb className="text-blue-500" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -13,7 +13,8 @@ export default function AiPage() {
             </>
         ),
         subtitle: "Implementăm soluții AI personalizate pentru a automatiza procese, a optimiza operațiuni și a oferi insight-uri valoroase din datele companiei tale.",
-        cta: { text: "Descoperă potențialul AI", href: "#" },
+        cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
+        cta_2: { text: "Contează pe experiența noastră!", href: "#" },
         rating: "Soluții implementate pentru zeci de companii",
         image: { src: "/img/website.png", alt: "AI Solutions" }
     };
