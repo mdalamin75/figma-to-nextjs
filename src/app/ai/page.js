@@ -47,7 +47,7 @@ export default function AiPage() {
                 Creăm aplicații mobile <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">optimizate</span>  pentru <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">viteză, UX și rezultate concrete.</span> Aplicația ta devine un instrument puternic de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">marketing și fidelizare.</span>
             </>
         ),
-        cta: { text: "Contactează-ne", href: "#" },
+        cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
     };
 
     const solutionsData = {

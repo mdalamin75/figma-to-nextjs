@@ -1,7 +1,7 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
 
-export default function FaqSection({ faq, openFaq, toggleFaq }) {
+export default function HomeFaqSection({ faq, openFaq, toggleFaq }) {
     if (!faq || !Array.isArray(faq)) return null;
     return (
         <section className="bg-white py-20">
@@ -18,32 +18,38 @@ export default function FaqSection({ faq, openFaq, toggleFaq }) {
                     {faq.map((item, i) => (
                         <div
                             key={i}
-                            className="bg-gray-50 rounded-xl transition-all duration-300">
+                            className="bg-gray-50 rounded-xl transition-all duration-300"
+                        >
                             <button
                                 className="w-full flex justify-between items-center text-left p-6 cursor-pointer group"
                                 type="button"
-                                onClick={() => toggleFaq(i)}>
+                                onClick={() => toggleFaq(i)}
+                            >
                                 <span className="text-lg font-semibold text-gray-800">
-                                    {item.question}
+                                    {item.q}
                                 </span>
                                 <span
-                                    className={`ml-4 text-blue-500 group-hover:text-blue-700 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}>
+                                    className={`ml-4 text-blue-500 group-hover:text-blue-700 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""
+                                        }`}
+                                >
                                     <svg
                                         width="24"
                                         height="24"
                                         fill="none"
                                         stroke="currentColor"
-                                        strokeWidth="2">
+                                        strokeWidth="2"
+                                    >
                                         <path d="M6 9l6 6 6-6" />
                                     </svg>
                                 </span>
                             </button>
                             <div
                                 className={`transition-all duration-300 overflow-hidden ${openFaq === i
-                                    ? "px-6 pb-6 max-h-96 opacity-100"
-                                    : "p-0 max-h-0 opacity-0"
-                                    }`}>
-                                <p className="text-gray-600">{item.answer}</p>
+                                        ? "px-6 pb-6 max-h-96 opacity-100"
+                                        : "p-0 max-h-0 opacity-0"
+                                    }`}
+                            >
+                                <p className="text-gray-600">{item.a}</p>
                             </div>
                         </div>
                     ))}

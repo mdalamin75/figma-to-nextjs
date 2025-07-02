@@ -72,9 +72,9 @@ export default function SolutionsSection({ plans: allPlans }) {
                                     </li>
                                 ))}
                             </ul>
-                            <a href="#" className={`w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-normal bg-gradient-to-r  from-blue-700 to-purple-600 text-white  rounded-full shadow-sm gap-2 ${plan.recommended ? 'text-white bg-blue-600 hover:bg-blue-700' : 'text-blue-600 bg-white hover:bg-blue-50'}`}>
+                            <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                                 Contactează-ne
-                                <Image src="/img/boostIcon.png" alt="boostIcon" width={20} height={10} />
+                                <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                             </a>
                         </div>
                     ))}

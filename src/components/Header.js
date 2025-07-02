@@ -29,7 +29,7 @@ export default function Header() {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center justify-center space-x-8 text-base font-medium">
                         {navLinks.map((link) => (
-                            <Link key={link.href} href={link.href} className="text-gray-600 hover:text-blue-600 transition-colors pb-1 border-b-2 border-transparent hover:border-blue-600">
+                            <Link key={link.href} href={link.href} className="text-gray-900 text-sm font-semibold hover:text-blue-600 transition-colors pb-1 border-b-2 border-transparent hover:border-blue-600">
                                 {link.label}
                             </Link>
                         ))}
@@ -37,9 +37,9 @@ export default function Header() {
 
                     {/* Right side: CTA */}
                     <div className="flex items-center space-x-3">
-                        <a href="#" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
+                        <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                             Contactează-ne
-                            <Image src="/img/boostIcon.png" alt="boostIcon" width={20} height={10} />
+                            <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                         </a>
                     </div>
 
@@ -65,9 +65,9 @@ export default function Header() {
                                 {link.label}
                             </Link>
                         ))}
-                        <a href="#" className="w-full mt-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-3 rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg">
+                         <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-700 to-purple-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2">
                             Contactează-ne
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                            <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                         </a>
                     </div>
                 </div>

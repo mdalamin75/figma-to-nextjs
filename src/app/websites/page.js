@@ -24,7 +24,7 @@ export default function LandingPage() {
         <span className="text-blue-500 font-semibold">creștere reală.</span>
       </>
     ),
-    cta: { text: "Contactează-ne", href: "#" },
+    cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
     cta_2: { text: "Contează pe experiența noastră!", href: "#" },
     rating: "100+ website-uri",
     image: { src: "/img/webHero.png", alt: "Website preview" },
@@ -60,7 +60,7 @@ export default function LandingPage() {
         Creăm platforme digitale axate pe <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">conversie, viteză</span> și <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">impact vizual.</span> Gândește-ți site-ul ca un <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">activ de marketing,</span>  nu doar o vitrină. 
       </>
     ),
-    cta: { text: "Contactează-ne", href: "#" },
+    cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
   };
 
   const solutionsData = {
