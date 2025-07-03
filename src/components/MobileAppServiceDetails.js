@@ -17,7 +17,7 @@ const AppStoreSVG = () => (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="40" height="40" rx="10" fill="#F5F7FA" />
         <g>
-            <circle cx="20" cy="20" r="12" fill="#BFC9D1" />
+            <circle cx="20" cy="20" r="12" fill="#2b7fff" />
             <rect x="16" y="12" width="8" height="16" rx="4" fill="#fff" />
         </g>
     </svg>

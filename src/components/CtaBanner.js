@@ -11,7 +11,7 @@ export default function CtaBanner({
             Creștem afaceri cu tehnologie și creativitate.
         </>
     ),
-    button = { label: 'Hai să vorbim!', href: '#' },
+    button = { label: 'Hai să vorbim!', href: 'https://api.whatsapp.com/send?phone=40743368360' },
     small = 'Fără plăți ascunse • Livrare rapidă • Suport dedicat',
 }) {
     return (
@@ -28,8 +28,8 @@ export default function CtaBanner({
                 <p className="text-lg text-gray-600 mb-8">
                     {subheadline}
                 </p>
-                <a href={button.href} className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition-all text-base">
-                    <Image src="/img/boostIcon.png" alt="boostIcon" width={20} height={10} />
+                <a href={button.href} target='_blank' className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl font-semibold shadow hover:from-blue-600 hover:to-blue-700 transition-all text-base">
+                    <Image src="/img/whatsapp.png" alt="boostIcon" width={20} height={10} />
                     {button.label}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6" strokeLinecap="round" strokeLinejoin="round" /></svg>
 

@@ -45,14 +45,14 @@ const AnimatedFlowchart = () => {
     }, []);
 
     const DottedArrow = ({ show, delay = 0 }) => (
-        <div className="flex items-center justify-center my-8">
+        <div className="flex items-center justify-center my-4 md:my-8">
             <div className="relative">
                 {/* Vertical dotted line */}
-                <div className={`w-0.5 bg-gray-400 transition-all duration-1000 ${show ? 'h-12' : 'h-0'
+                <div className={`w-0.5 bg-gray-400 transition-all duration-1000 ${show ? 'h-8 md:h-12' : 'h-0'
                     }`} style={{ transitionDelay: `${delay}ms` }}></div>
 
-                {/* Horizontal dotted line with arrow */}
-                <div className={`absolute top-full left-1/2 transform -translate-x-1/2 transition-all duration-1000 ${show ? 'w-32' : 'w-0'
+                {/* Horizontal dotted line with arrow - hidden on mobile */}
+                <div className={`hidden md:block absolute top-full left-1/2 transform -translate-x-1/2 transition-all duration-1000 ${show ? 'w-32' : 'w-0'
                     }`} style={{ transitionDelay: `${delay + 500}ms` }}>
                     <div className="relative">
                         <div className="h-0.5 bg-gray-400 border-dashed border-t-2 border-gray-400 bg-transparent"></div>
@@ -61,26 +61,26 @@ const AnimatedFlowchart = () => {
                     </div>
                 </div>
 
-                {/* Second vertical dotted line */}
-                <div className={`absolute top-full left-1/2 transform translate-x-16 -translate-x-1/2 w-0.5 bg-gray-400 transition-all duration-1000 ${show ? 'h-12' : 'h-0'
+                {/* Second vertical dotted line - hidden on mobile */}
+                <div className={`hidden md:block absolute top-full left-1/2 transform translate-x-16 -translate-x-1/2 w-0.5 bg-gray-400 transition-all duration-1000 ${show ? 'h-12' : 'h-0'
                     }`} style={{ transitionDelay: `${delay + 1500}ms` }}></div>
             </div>
         </div>
     );
 
     return (
-        <div className="flex flex-col items-start justify-center min-h-screen  p-8 overflow-hidden">
+        <div className="flex flex-col items-center justify-center p-4 md:p-8">
             <div className="relative w-full max-w-4xl">
 
-                {/* Step 1 - Right */}
-                <div className={`flex justify-end mb-4 transition-all duration-1000 ${currentStep >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                {/* Step 1 - Right on desktop, center on mobile */}
+                <div className={`flex justify-center md:justify-end mb-4 transition-all duration-1000 ${currentStep >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}>
-                    <div className={`${steps[0].color} rounded-2xl px-5 py-4 shadow-lg w-96`}>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-white bg-opacity-20 p-3 rounded-xl flex-shrink-0">
-                                <Settings className="w-6 h-6" />
+                    <div className={`${steps[0].color} rounded-2xl p-4 md:p-6 shadow-lg w-full max-w-sm md:w-96`}>
+                        <div className="flex items-center space-x-3 md:space-x-4">
+                            <div className="bg-white bg-opacity-20 p-2 md:p-3 rounded-xl flex-shrink-0">
+                                <Settings className="w-5 h-5 md:w-6 md:h-6" />
                             </div>
-                            <h3 className="text-base font-semibold text-white">
+                            <h3 className="text-base md:text-lg font-semibold text-white">
                                 {steps[0].title}
                             </h3>
                         </div>
@@ -90,15 +90,15 @@ const AnimatedFlowchart = () => {
                 {/* Arrow 1 */}
                 <DottedArrow show={currentStep >= 1} delay={0} />
 
-                {/* Step 2 - Left */}
-                <div className={`flex justify-start mb-4 transition-all duration-1000 ${currentStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                {/* Step 2 - Left on desktop, center on mobile */}
+                <div className={`flex justify-center md:justify-start mb-4 transition-all duration-1000 ${currentStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}>
-                    <div className={`${steps[1].color} rounded-2xl px-5 py-4 shadow-lg w-96`}>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-white bg-opacity-20 p-3 rounded-xl flex-shrink-0">
-                                <Wand2 className="w-6 h-6 " />
+                    <div className={`${steps[1].color} rounded-2xl p-4 md:p-6 shadow-lg w-full max-w-sm md:w-96`}>
+                        <div className="flex items-center space-x-3 md:space-x-4">
+                            <div className="bg-white bg-opacity-20 p-2 md:p-3 rounded-xl flex-shrink-0">
+                                <Wand2 className="w-5 h-5 md:w-6 md:h-6" />
                             </div>
-                            <h3 className="text-lg font-semibold text-white">
+                            <h3 className="text-base md:text-lg font-semibold text-white">
                                 {steps[1].title}
                             </h3>
                         </div>
@@ -108,15 +108,15 @@ const AnimatedFlowchart = () => {
                 {/* Arrow 2 */}
                 <DottedArrow show={currentStep >= 2} delay={0} />
 
-                {/* Step 3 - Right */}
-                <div className={`flex justify-end transition-all duration-1000 ${currentStep >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                {/* Step 3 - Right on desktop, center on mobile */}
+                <div className={`flex justify-center md:justify-end transition-all duration-1000 ${currentStep >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                     }`}>
-                    <div className={`${steps[2].color} rounded-2xl px-5 py-4 shadow-lg w-96`}>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-white bg-opacity-20 p-3 rounded-xl flex-shrink-0">
-                                <Sparkles className="w-6 h-6 " />
+                    <div className={`${steps[2].color} rounded-2xl p-4 md:p-6 shadow-lg w-full max-w-sm md:w-96`}>
+                        <div className="flex items-center space-x-3 md:space-x-4">
+                            <div className="bg-white bg-opacity-20 p-2 md:p-3 rounded-xl flex-shrink-0">
+                                <Sparkles className="w-5 h-5 md:w-6 md:h-6" />
                             </div>
-                            <h3 className="text-lg font-semibold text-white">
+                            <h3 className="text-base md:text-lg font-semibold text-white">
                                 {steps[2].title}
                             </h3>
                         </div>

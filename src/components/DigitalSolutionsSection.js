@@ -1,5 +1,6 @@
 import React from "react";
 import { Zap, Smartphone, Video, SquarePen, Bot, Globe, CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function DigitalSolutionsSection() {
     return (
@@ -90,9 +91,16 @@ export default function DigitalSolutionsSection() {
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">Pregătit să începem?</h4>
                     <p className="text-gray-500 mb-6">Hai să construim ceva memorabil, împreună.</p>
                     <a
-                        href="#contact"
-                        className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2">
+                        href="https://api.whatsapp.com/send?phone=40743368360"
+                        target="_blank"
+                        className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-blue-700 transition-colors text-base gap-2">
                         Contactează-ne
+                        <Image
+                            src="/img/whatsapp.png"
+                            alt="whatsapp"
+                            width={20}
+                            height={10}
+                        />
                     </a>
                 </div>
             </div>

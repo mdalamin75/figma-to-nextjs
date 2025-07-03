@@ -86,7 +86,7 @@ const services = [
         text2: "Actualizări de Securitate",
         text3: "Optimizare Performanță ",
         image: "/img/service4.png",
-        href: "/video",
+        href: "/maintenance",
         tags: ["Promo", "Animații", "Social"],
         icon3: <ArrowRight className="w-4 h-4 text-green-700" />,
         cta: "Solicită mentenanță",
@@ -106,7 +106,7 @@ const services = [
         text2: "Actualizări de Securitate",
         text3: "Optimizare Performanță ",
         image: "/img/aiBanner.png",
-        href: "/video",
+        href: "/ai",
         tags: ["Promo", "Animații", "Social"],
         icon3: <ArrowRight className="w-4 h-4 text-[#C300FF]" />,
         cta: "Solicită mentenanță",
@@ -142,7 +142,7 @@ export default function ServicesSection() {
                             <p className="text-gray-500 text-base mb-4">{s.desc}</p>
                             {i === 0 ? (
                                 <MobileAppServiceDetails />
-                            ) :  (
+                            ) : (
                                 <>
                                     <div className="flex items-center gap-2 mb-3">{s.icon2}<p className="text-gray-500 text-base">{s.text}</p></div>
                                     <div className="flex items-center gap-2 mb-3">{s.icon2}<p className="text-gray-500 text-base">{s.text2}</p></div>
@@ -163,12 +163,10 @@ export default function ServicesSection() {
                             ) : i === 2 ? (
                                 <VideoGrid />
                             ) : i === 3 ? (
-                                <div className="w-full flex items-center justify-center">
                                 <WebsiteScanningAnimation />
-                              </div>
                             ) : i === 4 ? (
-                                <AnimatedFlowchart/>
-                            ): (
+                                <AnimatedFlowchart />
+                            ) : (
                                 <img
                                     src={s.image}
                                     alt={s.title}
