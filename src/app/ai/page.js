@@ -2,50 +2,54 @@
 import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
-import { BrainCircuit, Bot, Zap } from 'lucide-react';
+import { BrainCircuit, Bot, Zap, Check } from 'lucide-react';
 
 export default function AiPage() {
     const heroData = {
         title: (
             <>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Inteligență Artificială</span><br />
-                care accelerează afaceri
+                <span className="text-fuchsia-600">Inteligență <br /> Artificială </span>
+                care <br /> accelerează afaceri
             </>
         ),
-        subtitle: "Implementăm soluții AI personalizate pentru a automatiza procese, a optimiza operațiuni și a oferi insight-uri valoroase din datele companiei tale.",
+        subtitle: (
+            <>
+                <span className="text-fuchsia-600">Soluții AI </span> inteligente pentru <span className="text-fuchsia-600">automatizare, analiză <br /> avansată </span> și <span className="text-fuchsia-600">creștere rapidă</span> a afacerii tale.
+            </>
+        ),
         cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
         cta_2: { text: "Contează pe experiența noastră!", href: "#" },
-        rating: "Soluții implementate pentru zeci de companii",
-        image: { src: "/img/website.png", alt: "AI Solutions" }
+        rating: "100+ afaceri",
+        image: { src: "/img/aiBanner.png", alt: "AI Solutions" }
     };
 
     const featuresData = {
         title: (
             <>
-                Inteligență Artificială pentru <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Afaceri Performante</span>
+                <span className="text-fuchsia-600 text-3xl">Inteligență Artificială</span> <span className="text-3xl">pentru Afaceri Performante</span>
             </>
         ),
         subtitle: "Transformăm datele în decizii inteligente și procesele manuale în operațiuni automate.",
         features: [
             {
-                icon: <Bot className="w-8 h-8 text-purple-500" />,
-                title: 'Chatboți Inteligenți',
-                description: 'Dezvoltăm chatboți pentru suport clienți, lead generation sau automatizări interne, disponibili 24/7.',
+                icon: <Check className="w-8 h-8 text-blue-700" />,
+                title: 'Automatizare Inteligentă',
+                description: 'Reducem timpul și costurile cu procese AI eficiente și precise.',
             },
             {
-                icon: <BrainCircuit className="w-8 h-8 text-pink-500" />,
-                title: 'Analiză Predictivă',
-                description: 'Folosim modele de machine learning pentru a analiza datele istorice și a prezice trenduri viitoare.',
+                icon: <Check className="w-8 h-8 text-blue-700" />,
+                title: 'Decizii Bazate pe Date',
+                description: 'Analizăm informații în timp real pentru strategii mai bune. ',
             },
             {
-                icon: <Zap className="w-8 h-8 text-yellow-500" />,
-                title: 'Automatizarea Proceselor',
-                description: 'Identificăm și automatizăm sarcini repetitive (RPA) pentru a crește eficiența și a reduce erorile umane.',
+                icon: <Check className="w-8 h-8 text-blue-700" />,
+                title: 'Personalizare Avansată',
+                description: 'Experiențe unice pentru fiecare utilizator, adaptate prin AI.  ',
             },
         ],
         bottom_text: (
             <>
-                Creăm aplicații mobile <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">optimizate</span>  pentru <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">viteză, UX și rezultate concrete.</span> Aplicația ta devine un instrument puternic de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-600">marketing și fidelizare.</span>
+                <span className="text-fuchsia-600">Automatizăm, optimizăm</span> și <span className="text-fuchsia-600">inovăm</span> procesele tale digitale cu <span className="text-fuchsia-600">soluții AI</span> integrate — de la website-uri și aplicații, până la conținut video și campanii de marketing.
             </>
         ),
         cta: { text: "Contactează-ne", href: "https://api.whatsapp.com/send?phone=40743368360" },
@@ -54,21 +58,71 @@ export default function AiPage() {
     const solutionsData = {
         unique: [
             {
-                name: 'Chatbot',
+                name: 'AI Starter',
                 price: '5.000€+',
-                features: ['Integrare website/Facebook', 'Flux de conversație custom', 'Colectare date', 'Panou de administrare'],
-                recommended: true,
-            },
-            {
-                name: 'Analiză Date',
-                price: '15.000€+',
-                features: ['Colectare și curățare date', 'Dezvoltare model predictiv', 'Dashboard de vizualizare', 'Raport de analiză'],
+                cta: 'Lansare rapidă',
+                features: [
+                    'Analiză și evaluare inițială',
+                    'Soluții AI personalizate de bază',
+                    'Optimizare automată simplificată',
+                    'Interfață intuitivă pentru utilizator',
+                    'Monitorizare și raportare continuă',
+                    'Raportare standard de performanță',
+                    'Suport tehnic de bază',
+                    'Scalabilitate flexibilă',
+                ],
                 recommended: false,
             },
             {
-                name: 'Automatizare',
-                price: '10.000€+',
-                features: ['Analiză procese', 'Dezvoltare robot RPA', 'Implementare și testare', 'Mentenanță și suport'],
+                name: 'AI Business',
+                price: '15.000€+',
+                cta: 'Creștere stabilă',
+                features: [
+                    'Soluții AI avansate și personalizate',
+                    'Optimizare automată în timp real',
+                    'Integrare flexibilă cu sisteme existente',
+                    'Dashboard personalizat pentru date și performanță',
+                    'Automatizări inteligente',
+                    'Monitorizare avansată a performanței',
+                    'Suport prioritar dedicat',
+                    'Optiuni extinse de personalizare',
+                ],
+                recommended: false,
+            },
+            {
+                name: 'AI Enterprise',
+                price: '50.000€+',
+                cta: 'Vânzări eficiente',
+                features: [
+                    'Soluții AI dedicate companiilor mari',
+                    'Automatizări și optimizări predictive',
+                    'Integrare completă cu infrastructura IT',
+                    'Analytics complexe cu raportare detaliată',
+                    'Mentenanță și actualizări proactive',
+                    'Suport dedicat 24/7',
+                    'Securitate și conformitate avansată',
+                    'Consultanță strategică continuă',
+                ],
+                recommended: false,
+            },
+            {
+                name: (
+                    <>
+                        <span className="text-blue-500">AI Custom</span>
+                    </>
+                ),
+                price: '100.000€+',
+                cta: 'Fără limite',
+                features: [
+                    'Soluții AI tailor-made, fără limitări',
+                    'Dezvoltare și implementare la scară largă',
+                    'Integrare multiplatformă și multi-sistem',
+                    'Management complet al datelor și automatizărilor',
+                    'Suport tehnic și strategic personalizat non-stop',
+                    'Scalare și optimizări personalizate continuu',
+                    'Training și transfer de know-how',
+                    'Raportare și analiză customizată',
+                ],
                 recommended: false,
             },
         ],
@@ -79,9 +133,12 @@ export default function AiPage() {
         title: "Întrebări frecvente",
         subtitle: "Răspunsuri la cele mai comune întrebări despre soluțiile AI.",
         faqs: [
-            { question: "Ce date sunt necesare pentru un proiect AI?", answer: "Tipul de date necesar depinde de proiect. Poate include date de vânzări, interacțiuni cu clienții, date de producție etc. Vom analiza împreună ce este relevant pentru obiectivul tău." },
-            { question: "Cât de sigur este procesul?", answer: "Securitatea și confidențialitatea datelor sunt prioritatea noastră. Respectăm normele GDPR și folosim cele mai bune practici pentru a proteja informațiile companiei tale." },
-            { question: "Ce rezultate pot aștepta?", answer: "Rezultatele pot include reducerea costurilor operaționale, creșterea vânzărilor, îmbunătățirea satisfacției clienților sau luarea unor decizii de business mai informate." },
+            { question: "Ce include pachetul de mentenanță?", answer: "Actualizări, backup-uri, monitorizare, suport tehnic și optimizări." },
+            { question: "Cât durează răspunsul la o solicitare de suport?", answer: "În general, răspundem în maxim 24 de ore lucrătoare." },
+            { question: "Pot modifica funcționalitățile în timpul mentenanței?", answer: "Da, corecturile și îmbunătățirile sunt incluse în pachet." },
+            { question: "Ce se întâmplă dacă website-ul sau aplicația se blochează?", answer: "Intervenim rapid pentru remedierea problemei, în funcție de nivelul pachetului." },
+            { question: "Este nevoie de contract pe termen lung?", answer: "Nu, oferim servicii flexibile fără angajamente obligatorii." },
+            { question: "Cum se face plata pentru serviciile de mentenanță?", answer: "Plata este lunară, prin factură emisă de firma noastră." },
         ]
     };
 
@@ -91,7 +148,7 @@ export default function AiPage() {
             <HeroSection {...heroData} />
             <FeaturesSection {...featuresData} />
             <SolutionsSection plans={solutionsData} />
-            <FaqSection {...faqData} />
+            <FaqSection faq={faqData.faqs} />
             <CtaBanner />
             <Footer />
         </div>

@@ -200,7 +200,7 @@ export default function LandingPage() {
       <FaqSection
         title={faqData.title}
         subtitle={faqData.subtitle}
-        faqs={faqData.faqs}
+        faq={faqData.faqs}
       />
       <CtaBanner />
       <Footer />

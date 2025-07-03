@@ -12,6 +12,7 @@ module.exports = {
             colors: {
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
+                'custom-magenta': '#e600ff',
             },
         },
     },

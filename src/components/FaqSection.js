@@ -1,7 +1,11 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function FaqSection({ faq, openFaq, toggleFaq }) {
+export default function FaqSection({ faq, openFaq: controlledOpenFaq, toggleFaq: controlledToggleFaq }) {
+    const [internalOpenFaq, setInternalOpenFaq] = useState(null);
+    const isControlled = controlledOpenFaq !== undefined && controlledToggleFaq !== undefined;
+    const openFaq = isControlled ? controlledOpenFaq : internalOpenFaq;
+    const toggleFaq = isControlled ? controlledToggleFaq : (i) => setInternalOpenFaq(openFaq === i ? null : i);
     if (!faq || !Array.isArray(faq)) return null;
     return (
         <section className="bg-white py-20">

@@ -167,7 +167,7 @@ export default function MobileAppsPage() {
             <HeroSection {...heroData} />
             <FeaturesSection {...featuresData} />
             <SolutionsSection plans={solutionsData} />
-            <FaqSection {...faqData} />
+            <FaqSection faq={faqData.faqs} />
             <CtaBanner />
             <Footer />
         </div>
