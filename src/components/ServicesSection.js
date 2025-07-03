@@ -12,6 +12,7 @@ import {
     CircleCheckBig,
     ArrowRight,
 } from "lucide-react";
+import VideoGrid from "./VideoGrid";
 
 const services = [
     {
@@ -157,6 +158,8 @@ export default function ServicesSection() {
                                 <MobileMockupSlider />
                             ) : i === 1 ? (
                                 <WebMockupSlider />
+                            ) : i === 2 ? (
+                                <VideoGrid />
                             ) : (
                                 <img
                                     src={s.image}

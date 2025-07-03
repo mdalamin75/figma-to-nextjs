@@ -10,6 +10,7 @@ import {
 } from "../../components";
 import CtaBanner from "../../components/CtaBanner";
 import { ShieldCheck, Zap, Server, Check } from "lucide-react";
+import WebsiteScanningAnimation from "@/components/WebsiteScanningAnimation";
 
 export default function MaintenancePage() {
 	const heroData = {
@@ -169,19 +170,28 @@ export default function MaintenancePage() {
 			"Răspunsuri la cele mai comune întrebări despre serviciile de mentenanță.",
 		faqs: [
 			{
-				question: "De ce am nevoie de mentenanță?",
-				answer:
-					"Mentenanța asigură că platforma ta digitală rămâne securizată, rapidă și funcțională. Previne problemele înainte ca acestea să apară și afecteze utilizatorii sau afacerea.",
+				question: "Ce include serviciul de mentenanță?",
+				answer: "Monitorizare, actualizări, backup-uri regulate, optimizare viteză, suport tehnic și intervenții de securitate."
 			},
 			{
-				question: "Ce se întâmplă dacă am o problemă urgentă?",
-				answer:
-					"Pachetele noastre Business și Premium includ suport prioritar pentru a rezolva orice problemă urgentă în cel mai scurt timp posibil.",
+				question: "Cât costă mentenanța lunară?",
+				answer: "Oferim pachete flexibile începând de la 49€/lună, în funcție de tipul site-ului/aplicației și nivelul de suport necesar."
 			},
 			{
-				question: "Pot solicita modificări la website?",
-				answer:
-					"Da, pachetul Premium include un număr de ore de dezvoltare pe care le poți folosi pentru modificări minore sau adăugiri de conținut.",
+				question: "Dacă am deja un site, pot apela la voi pentru mentenanță?",
+				answer: "Absolut. Preluăm mentenanța și optimizarea chiar dacă site-ul nu a fost creat de noi."
+			},
+			{
+				question: "Interveniți și în cazuri de urgență (site căzut, atacuri)?",
+				answer: "Da. Oferim suport tehnic rapid pentru urgențe 24/7, în funcție de pachetul ales."
+			},
+			{
+				question: "Ce tipuri de site-uri întrețineți?",
+				answer: "Ne ocupăm de WordPress, Shopify, Laravel, React, site-uri custom, cât și aplicații web & mobile."
+			},
+			{
+				question: "De ce am nevoie de mentenanță dacă site-ul funcționează?",
+				answer: "Pentru a preveni probleme majore, a păstra site-ul rapid, sigur și actualizat constant – esențial pentru performanța digitală."
 			},
 		],
 	};
@@ -191,7 +201,8 @@ export default function MaintenancePage() {
 			<Header />
 			<HeroSection
 				{...heroData}
-				imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+				// imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+				rightContent={<WebsiteScanningAnimation />}
 			/>
 			<FeaturesSection {...featuresData} />
 			<SolutionsSection plans={solutionsData} />

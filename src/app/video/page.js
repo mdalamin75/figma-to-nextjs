@@ -10,6 +10,7 @@ import {
 } from "../../components";
 import CtaBanner from "../../components/CtaBanner";
 import { Video, Film, Share2, Check } from "lucide-react";
+import VideoGrid from "@/components/VideoGrid";
 
 export default function VideoPage() {
 	const [openFaq, setOpenFaq] = useState(null);
@@ -168,19 +169,28 @@ export default function VideoPage() {
 		subtitle: "Răspunsuri la cele mai comune întrebări despre producția video.",
 		faqs: [
 			{
-				question: "Cât durează producția unui video?",
-				answer:
-					"Durata variază în funcție de complexitate. Un video scurt pentru social media poate fi gata în câteva zile, în timp ce o producție complexă poate dura câteva săptămâni.",
+				question: "Includeți și filmări reale?",
+				answer: "Da, putem adăuga secvențe filmate cu model din echipa noastră, în funcție de pachetul ales."
 			},
 			{
-				question: "Pot folosi video-ul pe orice platformă?",
-				answer:
-					"Da, livrăm video-urile în formate optimizate pentru diverse platforme, de la website-ul tău, la social media sau campanii de publicitate.",
+				question: "Oferiți modele pentru filmare?",
+				answer: "Da, colaborăm cu modele profesionale disponibile pentru proiectele video."
 			},
 			{
-				question: "Ce include procesul de producție?",
-				answer:
-					"Procesul nostru acoperă totul: de la strategie și scenariu, la filmare, editare, post-producție și livrarea finală.",
+				question: "Cât durează livrarea?",
+				answer: "Timpul mediu este de 5–10 zile lucrătoare, în funcție de complexitate."
+			},
+			{
+				question: "Pot cere modificări?",
+				answer: "Desigur, fiecare pachet include una sau mai multe runde de revizuiri."
+			},
+			{
+				question: "Pot folosi video-ul oriunde?",
+				answer: "Da, videoclipurile pot fi folosite pe social media, site, ads etc."
+			},
+			{
+				question: "Realizați și scenariul?",
+				answer: "Da, oferim copywriting complet pentru structură și mesaj clar."
 			},
 		],
 	};
@@ -191,6 +201,7 @@ export default function VideoPage() {
 			<HeroSection
 				{...heroData}
 				imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+				rightContent={<VideoGrid />}
 			/>
 			<FeaturesSection {...featuresData} />
 			<SolutionsSection plans={solutionsData} />

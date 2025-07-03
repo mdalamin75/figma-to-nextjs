@@ -133,12 +133,30 @@ export default function AiPage() {
         title: "Întrebări frecvente",
         subtitle: "Răspunsuri la cele mai comune întrebări despre soluțiile AI.",
         faqs: [
-            { question: "Ce include pachetul de mentenanță?", answer: "Actualizări, backup-uri, monitorizare, suport tehnic și optimizări." },
-            { question: "Cât durează răspunsul la o solicitare de suport?", answer: "În general, răspundem în maxim 24 de ore lucrătoare." },
-            { question: "Pot modifica funcționalitățile în timpul mentenanței?", answer: "Da, corecturile și îmbunătățirile sunt incluse în pachet." },
-            { question: "Ce se întâmplă dacă website-ul sau aplicația se blochează?", answer: "Intervenim rapid pentru remedierea problemei, în funcție de nivelul pachetului." },
-            { question: "Este nevoie de contract pe termen lung?", answer: "Nu, oferim servicii flexibile fără angajamente obligatorii." },
-            { question: "Cum se face plata pentru serviciile de mentenanță?", answer: "Plata este lunară, prin factură emisă de firma noastră." },
+            {
+                question: "Ce tipuri de soluții AI oferiți?",
+                answer: "Furnizăm sisteme personalizate pentru generare de conținut, chatbot-uri, automatizare procese, analiză de date și recomandări inteligente."
+            },
+            {
+                question: "Pot integra AI în site-ul sau aplicația mea?",
+                answer: "Da, putem integra modele AI direct în website-uri, aplicații mobile sau platforme interne, în funcție de obiectivele tale."
+            },
+            {
+                question: "Este nevoie de cunoștințe tehnice pentru a folosi soluțiile AI?",
+                answer: "Nu. Toate soluțiile noastre sunt gândite să fie ușor de utilizat, chiar și de persoane fără background tehnic."
+            },
+            {
+                question: "Cât costă o soluție AI personalizată?",
+                answer: "Prețul variază în funcție de complexitate, integrare și domeniu de aplicare. Oferim pachete flexibile și consultanță gratuită."
+            },
+            {
+                question: "Cât durează implementarea unei soluții AI?",
+                answer: "În funcție de proiect, durata variază între 1 și 4 săptămâni. Pentru unele funcții standard, livrarea poate fi în doar câteva zile."
+            },
+            {
+                question: "Ce beneficii aduce AI pentru afacerea mea?",
+                answer: "Reduci timpul de lucru, automatizezi sarcini repetitive, personalizezi experiențele clienților și optimizezi procesele de business."
+            },
         ]
     };
 
