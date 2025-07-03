@@ -2,11 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
 
-export default function HeroSection({ title, subtitle, cta, cta_2, rating, image, image_bottom_text, rightContent }) {
+export default function HeroSection({ title, subtitle, cta, cta_2, rating, image, imageClassName, image_bottom_text, rightContent }) {
     return (
         <section className="bg-white pt-20 pb-20">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
                     <div className="flex flex-col items-start">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-none mb-4">
                             {title}
@@ -60,7 +60,7 @@ export default function HeroSection({ title, subtitle, cta, cta_2, rating, image
                                         alt={image.alt}
                                         width={600}
                                         height={400}
-                                        className="rounded-2xl mx-auto max-w-[50%] max-h-[400px]"
+                                        className={imageClassName || "rounded-2xl mx-auto max-w-[50%] max-h-[400px]"}
                                     />
                                 )
                             )}

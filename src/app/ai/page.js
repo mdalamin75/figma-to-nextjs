@@ -145,7 +145,10 @@ export default function AiPage() {
     return (
         <div className="min-h-screen bg-white">
             <Header />
-            <HeroSection {...heroData} />
+            <HeroSection
+                {...heroData}
+                imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+            />
             <FeaturesSection {...featuresData} />
             <SolutionsSection plans={solutionsData} />
             <FaqSection faq={faqData.faqs} />

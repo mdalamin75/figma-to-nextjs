@@ -67,19 +67,17 @@ export default function MaintenancePage() {
 		],
 		bottom_text: (
 			<>
-				Ne ocupăm de 
+				Ne ocupăm de
 				<span className="text-green-600">
-					 actualizări, securitate
+					actualizări, securitate
 				</span>
 				și
 				<span className="text-green-600">
 					optimizare
 				</span>  continuă, astfel încât tu să te concentrezi pe
-				<span className="text-green-600">
-					business,
-				</span>
-				pe
-				<span>probleme tehnice</span>
+				<span className="text-green-600"> business,</span>
+				nu pe
+				<span className="text-green-600"> probleme tehnice</span>
 			</>
 		),
 		cta: {
@@ -89,38 +87,76 @@ export default function MaintenancePage() {
 	};
 
 	const solutionsData = {
-		unique: [],
-		monthly: [
+		unique: [
 			{
 				name: "Basic",
-				price: "100€/lună",
+				price: "100€",
+				description: 'Dezvoltat 100% pe nevoile tale reale',
+				cta: "Lansare rapidă",
 				features: [
-					"Monitorizare 24/7",
-					"Backup săptămânal",
-					"Actualizări de securitate",
-					"Suport prin email",
+					"Actualizări lunare platformă",
+					"Backup lunar automat",
+					"Monitorizare uptime de bază",
+					"Suport email standard",
+					"Protecție bazică împotriva atacurilor",
+					"Optimizare viteză minimă",
+					"Corecturi bug-uri simple",
+					"Raport lunar de status",
 				],
 				recommended: false,
 			},
 			{
-				name: "Business",
-				price: "200€/lună",
+				name: "Avansat",
+				price: "200€",
+				description: 'Dezvoltat 100% pe nevoile tale reale',
+				cta: "Creștere stabilă",
 				features: [
-					"Totul de la Basic",
-					"Backup zilnic",
-					"Optimizare viteză lunară",
-					"Suport prioritar",
+					"Actualizări săptămânale platformă",
+					"Backup săptămânal automat",
+					"Monitorizare uptime 24/7",
+					"Suport telefonic și email prioritar",
+					"Optimizare SEO de bază",
+					"Audit securitate trimestrial",
+					"Corecturi rapide și intervenții urgente",
+					"Raport detaliat performanță",
 				],
-				recommended: true,
+				recommended: false,
 			},
 			{
-				name: "Premium",
-				price: "350€/lună",
+				name: "Aplicații Mobile",
+				price: "200€",
+				description: 'Dezvoltat 100% pe nevoile tale reale',
+				cta: "Vânzări eficiente",
 				features: [
-					"Totul de la Business",
-					"Suport telefonic",
-					"Raport de performanță lunar",
-					"Ore de dezvoltare incluse",
+					"Actualizări regulate aplicație",
+					"Backup automat zilnic",
+					"Monitorizare performanță și erori",
+					"Suport tehnic dedicat",
+					"Optimizare UX/UI continuă",
+					"Audit securitate aplicație",
+					"Corecturi rapide și patch-uri",
+					"Raport lunar cu statistici",
+				],
+				recommended: false,
+			},
+			{
+				name: (
+					<>
+						<span className="text-blue-500">Multi-Site</span>
+					</>
+				),
+				price: "350€",
+				description: 'Dezvoltat 100% pe nevoile tale reale',
+				cta: "Fără limite",
+				features: [
+					"Backup zilnic pentru toate platformele",
+					"Monitorizare 24/7 și alertare instant",
+					"Optimizare avansată performantă",
+					"Audit și raportare securitate lunară",
+					"Suport premium 24/7 dedicat",
+					"Implementare actualizări majore",
+					"Corecții și îmbunătățiri personalizate",
+					"Consultanță tehnică strategică",
 				],
 				recommended: false,
 			},
@@ -153,7 +189,10 @@ export default function MaintenancePage() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Header />
-			<HeroSection {...heroData} />
+			<HeroSection
+				{...heroData}
+				imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+			/>
 			<FeaturesSection {...featuresData} />
 			<SolutionsSection plans={solutionsData} />
 			<FaqSection faq={faqData.faqs} />

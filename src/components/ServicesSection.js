@@ -139,7 +139,7 @@ export default function ServicesSection() {
                             <p className="text-gray-500 text-base mb-4">{s.desc}</p>
                             {i === 0 ? (
                                 <MobileAppServiceDetails />
-                            ) : i === 1 ? null : (
+                            ) :  (
                                 <>
                                     <div className="flex items-center gap-2 mb-3">{s.icon2}<p className="text-gray-500 text-base">{s.text}</p></div>
                                     <div className="flex items-center gap-2 mb-3">{s.icon2}<p className="text-gray-500 text-base">{s.text2}</p></div>
