@@ -64,7 +64,7 @@ export default function SolutionsSection({ plans: allPlans }) {
                                 <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
                                 <p className="text-4xl font-extrabold text-gray-900 my-4">{plan.price}</p>
                                 <p className="text-blue-800 text-xs font-semibold mt-6 mb-6">{plan.description}</p>
-                                <Link href="#" className="flex items-center justify-center gap-2 max-w-56 px-6 py-2 text-center bg-blue-200/10 text-blue-400 rounded-full font-base text-sm  shadow hover:bg-blue-700 hover:text-white transition-colors mb-6">{plan.cta} <ArrowRight className="w-5 h-5" /></Link>
+                                <Link href="#" className="flex items-center justify-center gap-2 max-w-56 px-6 py-2 text-center bg-blue-200/10 text-blue-400 rounded-full font-base text-sm  shadow hover:bg-blue-700 hover:text-white transition-colors mb-6 mx-auto">{plan.cta} <ArrowRight className="w-5 h-5" /></Link>
                                 <ul className="space-y-4 mb-8">
                                     {plan.features.map((feature, i) => (
                                         <li key={i} className="flex items-center text-left">
@@ -74,7 +74,7 @@ export default function SolutionsSection({ plans: allPlans }) {
                                     ))}
                                 </ul>
                             </div>
-                            <a href="https://api.whatsapp.com/send?phone=40743368360" className="hidden md:inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2 mt-auto">
+                            <a href="https://api.whatsapp.com/send?phone=40743368360" className="inline-flex  items-center justify-center bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-base gap-2 mt-auto">
                                 Contactează-ne
                                 <Image src="/img/whatsapp.png" alt="whatsapp" width={20} height={10} />
                             </a>

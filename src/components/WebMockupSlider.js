@@ -64,7 +64,7 @@ export default function WebMockupSlider() {
                     pauseOnMouseEnter: true
                 }}
                 speed={2000}
-                className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl"
+                className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
             >
                 {slides.map((slide, idx) => (
                     <SwiperSlide key={idx}>

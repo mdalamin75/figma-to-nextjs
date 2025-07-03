@@ -1,34 +1,15 @@
 import React from "react";
 import { CircleCheckBig, Play } from "lucide-react";
+import Image from "next/image";
 
 const GooglePlaySVG = () => (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="10" fill="#F5F7FA" />
+        <rect width="40" height="40" rx="10"  />
         <g>
             <polygon points="12,8 32,20 12,32" fill="#34A853" />
             <polygon points="12,8 20,20 12,32" fill="#4285F4" />
             <polygon points="20,20 32,20 12,32" fill="#FBBC05" />
             <polygon points="12,8 32,20 20,20" fill="#EA4335" />
-        </g>
-    </svg>
-);
-
-const AppStoreSVG = () => (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="10" fill="#F5F7FA" />
-        <g>
-            <circle cx="20" cy="20" r="12" fill="#2b7fff" />
-            <rect x="16" y="12" width="8" height="16" rx="4" fill="#fff" />
-        </g>
-    </svg>
-);
-
-const AppGallerySVG = () => (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="10" fill="#F5F7FA" />
-        <g>
-            <rect x="10" y="14" width="20" height="12" rx="6" fill="#D32F2F" />
-            <text x="20" y="25" textAnchor="middle" fill="#fff" fontSize="8" fontFamily="Arial">HUAWEI</text>
         </g>
     </svg>
 );
@@ -39,11 +20,11 @@ const stores = [
         label: "Google Play",
     },
     {
-        icon: <AppStoreSVG />,
+        icon: <Image src="/img/apple.png" alt="App Store" width={24} height={24} className="mb-3" />,
         label: "App Store",
     },
     {
-        icon: <AppGallerySVG />,
+        icon: <Image src="/img/appGallery.png" alt="App Gallery" width={24} height={24} className="mb-3"/>,
         label: "App Gallery",
     },
 ];
@@ -82,7 +63,7 @@ export default function MobileAppServiceDetails() {
             </div>
             <div className="flex gap-4 mb-2 ms-4">
                 {stores.map((store, idx) => (
-                    <div key={idx} className="flex flex-col items-center px-1 py-1 rounded-xl border border-gray-300 bg-[#F5F7FA] shadow-sm min-w-[90px]">
+                    <div key={idx} className="flex flex-col items-center px-1 py-1 rounded-xl border border-gray-300 bg-gray-300/75 shadow-sm min-w-[90px]">
                         {store.icon}
                         <span className="text-xs font-light text-gray-700">{store.label}</span>
                     </div>
