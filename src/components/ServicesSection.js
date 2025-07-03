@@ -13,6 +13,8 @@ import {
     ArrowRight,
 } from "lucide-react";
 import VideoGrid from "./VideoGrid";
+import WebsiteScanningAnimation from "./WebsiteScanningAnimation";
+import AnimatedFlowchart from "./AnimatedFlowchart";
 
 const services = [
     {
@@ -103,7 +105,7 @@ const services = [
         text: "Monitorizare Constantă",
         text2: "Actualizări de Securitate",
         text3: "Optimizare Performanță ",
-        image: "/img/video.png",
+        image: "/img/aiBanner.png",
         href: "/video",
         tags: ["Promo", "Animații", "Social"],
         icon3: <ArrowRight className="w-4 h-4 text-[#C300FF]" />,
@@ -160,7 +162,13 @@ export default function ServicesSection() {
                                 <WebMockupSlider />
                             ) : i === 2 ? (
                                 <VideoGrid />
-                            ) : (
+                            ) : i === 3 ? (
+                                <div className="w-full flex items-center justify-center">
+                                <WebsiteScanningAnimation />
+                              </div>
+                            ) : i === 4 ? (
+                                <AnimatedFlowchart/>
+                            ): (
                                 <img
                                     src={s.image}
                                     alt={s.title}

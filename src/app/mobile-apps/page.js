@@ -3,6 +3,7 @@ import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
 import { Smartphone, ShieldCheck, CloudCog, Check } from 'lucide-react';
+import MobileMockupSlider from '@/components/MobileMockupSlider';
 
 export default function MobileAppsPage() {
     const heroData = {
@@ -164,7 +165,9 @@ export default function MobileAppsPage() {
     return (
         <div className="min-h-screen bg-white">
             <Header />
-            <HeroSection {...heroData} />
+            <HeroSection {...heroData} 
+            rightContent={<MobileMockupSlider />}
+            />
             <FeaturesSection {...featuresData} />
             <SolutionsSection plans={solutionsData} />
             <FaqSection faq={faqData.faqs} />

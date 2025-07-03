@@ -93,10 +93,10 @@ const WebsiteScanningAnimation = () => {
 
               {/* Completion Message */}
               <h2 className="text-3xl font-bold text-blue-500 mb-4">
-                Analysis Complete!
+                Maintenance Checked!
               </h2>
               <p className="text-gray-600 text-lg mb-8">
-                Ready to optimize your messaging
+                Your website and apps are running smoothly.
               </p>
 
               {/* Action Button */}
@@ -126,7 +126,7 @@ const WebsiteScanningAnimation = () => {
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             </div>
             <div className="flex-1 bg-white border border-gray-200 rounded-md px-3 py-1.5 text-sm text-gray-500 text-center">
-              BrandStori.ai/analysis
+              tagbyte.dev/analysis
             </div>
           </div>
 

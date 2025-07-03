@@ -3,6 +3,7 @@ import React from 'react';
 import { Header, HeroSection, FeaturesSection, SolutionsSection, FaqSection, Footer } from '../../components';
 import CtaBanner from '../../components/CtaBanner';
 import { BrainCircuit, Bot, Zap, Check } from 'lucide-react';
+import AnimatedFlowchart from '@/components/AnimatedFlowchart';
 
 export default function AiPage() {
     const heroData = {
@@ -165,7 +166,7 @@ export default function AiPage() {
             <Header />
             <HeroSection
                 {...heroData}
-                imageClassName="rounded-2xl mx-auto max-w-[80%] max-h-[500px] md:max-w-[90%] md:max-h-[600px]"
+                rightContent={<AnimatedFlowchart />}
             />
             <FeaturesSection {...featuresData} />
             <SolutionsSection plans={solutionsData} />

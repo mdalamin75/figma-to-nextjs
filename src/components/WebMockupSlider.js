@@ -75,12 +75,12 @@ export default function WebMockupSlider() {
                             </div>
 
                             {/* Label (only show if exists) */}
-                            {slide.label && (
+                            {/* {slide.label && (
                                 <div className="inline-flex items-center gap-1 px-2 sm:px-3 py-1 bg-blue-100 rounded-full text-sky-700 font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
                                     <Image src={slide.icon} alt="icon" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
                                     {slide.label}
                                 </div>
-                            )}
+                            )} */}
 
                             {/* Responsive image container */}
                             <div className="w-full flex justify-center mb-4 sm:mb-6">
