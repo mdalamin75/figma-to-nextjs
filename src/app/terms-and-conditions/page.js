@@ -29,7 +29,7 @@ export default function TermsAndConditions() {
                         <h3 className="font-bold mb-2 mt-4">🛡️ Informații legale și ANPC</h3>
                         <p>AD BOOST S.R.L. este o firmă înregistrată în România și respectă legislația în vigoare privind protecția consumatorilor.</p>
                         <p>Pentru sesizări sau reclamații oficiale, puteți contacta Autoritatea Națională pentru Protecția Consumatorilor (ANPC): <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://anpc.ro</a></p>
-                        <p>Date firmă <br />AD BOOST S.R.L.<br />CUI: [adaugă CUI]<br />Nr. Reg. Comerțului: [adaugă număr]<br />Sediu: [adaugă adresă completă]</p>
+                        <p>Date firmă: <br />AD BOOST S.R.L.<br />CUI: 48091747<br />Nr. Reg. Comerțului: J04/713/2023<br />Sediu: Letea 32 Sc. A Ap. 116</p>
 
                         <p className="text-center text-xs text-gray-400 mt-8">© 2025 @Byte All rights reserved.</p>
                         <div className="text-center mt-6">

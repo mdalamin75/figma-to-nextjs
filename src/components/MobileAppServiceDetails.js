@@ -20,11 +20,11 @@ const stores = [
         label: "Google Play",
     },
     {
-        icon: <Image src="/img/apple.png" alt="App Store" width={24} height={24} className="mb-3" />,
+        icon: <Image src="/img/apple.png" alt="App Store" width={24} height={24} className="mb-2 mt-1" />,
         label: "App Store",
     },
     {
-        icon: <Image src="/img/appGallery.png" alt="App Gallery" width={24} height={24} className="mb-3"/>,
+        icon: <Image src="/img/appGallery.png" alt="App Gallery" width={24} height={24} className="mb-2 mt-2"/>,
         label: "App Gallery",
     },
 ];
